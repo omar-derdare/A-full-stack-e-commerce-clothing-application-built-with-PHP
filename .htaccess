@@ -1,0 +1,16 @@
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive folders from direct access (defense in depth alongside PHP-level checks)
+<FilesMatch "\.(sql|log|md)$">
+    Require all denied
+</FilesMatch>
+
+# Prevent access to dotfiles
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+php_flag display_errors off
+php_value upload_max_filesize 5M
+php_value post_max_size 8M

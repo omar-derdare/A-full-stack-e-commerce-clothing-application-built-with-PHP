@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /cart.php
+Disallow: /checkout.php
+Disallow: /auth/
+
+# Replace with your real domain after deployment:
+Sitemap: http://localhost/clothing-store/sitemap.php
